@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ExtendedRedux.NET</id>
+    <version>1.0.1</version>
+    <title>ExtendedRedux.NET</title>
+    <authors>Milan Unger, Martin Tamajka</authors>
+    <licenseUrl>https://github.com/neonias/ExtendedRedux.NET</licenseUrl>
+    <projectUrl>https://github.com/neonias/ExtendedRedux.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extension of original redux.NET nuget package</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright Milan Unger and Martin Tamajka, 2017</copyright>
+    <tags>redux, .NET</tags>
+    <references>
+      <reference file="ExtendedRedux.NET.dll" />
+    </references>
+  </metadata>
+</package>
