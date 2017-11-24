@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using ExtendedRedux.NET.Actions;
 
 
 // ReSharper disable once CheckNamespace
@@ -29,7 +30,10 @@ namespace Redux
         public T Execute(T currentState, IAction action)
         {
             Func<T, IAction, T> reducer;
-            return reducers.TryGetValue(action.GetType(), out reducer) ? reducer(currentState , action) : currentState;
+            var intermediateState = reducers.TryGetValue(typeof(AnyAction), out reducer)
+                ? reducer(currentState, action)
+                : currentState;
+            return reducers.TryGetValue(action.GetType(), out reducer) ? reducer(intermediateState, action) : intermediateState;
         }
 
         /// <summary>
